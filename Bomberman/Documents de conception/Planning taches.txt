@@ -1,0 +1,36 @@
+Planning des taches :
+
+ - Créer la classe Plateau
+   - Constructeur -> Création du tableau (array[][]),
+		     placement de tous les blocs dans le tableau, 
+		     placement des joueurs dans le tableau
+   - Détection de la victoire -> reçoit un signal quand une bombe explose sur un joueur, 
+				 envoie un message au Manager
+   - Gérer l'explosion des bombes -> reçoit un signal des objets bombes,
+				     détruit les blocs destructibles à portée,
+				     tue les joueurs à portée
+
+   - Gérer le déplacement des personnages -> reçoit un signal des personnages,
+					     update la position des personnages sur le tableau
+
+
+ - Créer la classe Bombe
+   - Constructeur -> Création d'une portée (integer),
+		     création d'une position (integer, integer)
+		     création d'une longueur de mèche (nombre de secondes)
+		     création d'un Timer (avec invoke)
+   - Lancer l'explosion -> lancée grâce à invoke
+
+ - Créer la classe Personnage
+    - Constructeur -> Création d'une position (integer, integer)
+    		      création d'une portée (integer)
+		      création d'un nombre de bombe (integer)
+		      création d'une movement speed (float)
+    - Gérer le déplacement -> donner une nouvelle position : soit avec input soit via IA,
+			      envoie un signal au plateau avec la nouvelle position
+    - Gérer le placement de bombes -> créer une bombe (instancier) avec la portée et la position actuelle du personnage
+
+ - Créer la classe bloc
+    - Constructeur -> Création d'un type (integer : 0, 1, 2 -> vide, destructible, indestructible)
+		      création d'un bonus (integer : 0, 1, 2, 3 -> aucun, portée, +bombe, movement speed)
+    - Destruction du bloc -> créer le bonus 
