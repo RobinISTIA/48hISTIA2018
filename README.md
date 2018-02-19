@@ -4,7 +4,7 @@ Projet 48h de code de l'ISTIA
 
 nom du projet PARTY'STIA
 
-*********************Pour récupérer le repo !!********************************
+*********************Pour récupérer le repo !!**************
 - Placer vous là ou vous souhaitez avoir le dossier du projet 48hISTIA2018
 - taper la commande "git clone https://github.com/RobinISTIA/48hISTIA2018.git" SUR GIT BASH (pas de sourcetree, ni gitkraken, toussa ça pue) sinon tout plante (sisi, croyez moi) ^.^
 - bah normalement c'est bon 
