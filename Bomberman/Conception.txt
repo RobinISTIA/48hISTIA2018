@@ -1,4 +1,4 @@
-Bomberman
+﻿Bomberman
 
 Plateau à deux dimensions avec 3 types de case :
  - vide
@@ -17,9 +17,10 @@ Les bombes explosent à deux cases de porté en porté 1
 Si une bombe en touche une autre, elle la fait exploser
 Si une explosion touche un joueur, il meure
 Une fois qu'une bombe est posée, elle est indéplassable
+Une bombe explose au bout de 2 sec
 Des objets trouvables dans les murs cassables permettent d'augmenter la portée de un
 Le personnage à une vitesse constante
-Pas de timer
+Pas de timer de fin de jeu
 Les personnages commencent en position opposé
 Le jeu se termine lorsque l'un des deux joueurs meure
 Un seul round
