@@ -1,0 +1,28 @@
+Créer une scéne damier avec une unité de côté (1m sur 1m)
+Les blocks seront de 1x1x1
+Modéliser les différents type de mur
+
+
+Tâches :
+ - Créer le plateau de jeu
+   - Avec les murs indestructibles uniquement
+ - Rajouter les blocks destructibles au plateau
+ - Ajouter les bonus dans les murs
+ - Faire communiquer le FPS de Unity avec l'Oculus Rift ( au clavier / manettes )
+ - Faire l'affichage sur l'écran de PC (2D) vue de dessus
+ - Créer le personnage
+	- Avatar
+	- actions possible
+ - Implémenter les actions des manettes oculus
+	- poser les bombes
+ - S'occuper actions des bombes
+	- modéliser la bombe
+	- détruire les murs
+	- Explosions (animation)
+	- Tuer le joueur
+ - Détecter la victoire et la déclencher
+ - Modéliser les blocks
+	- Indestructibles
+	- Destructibles
+	- Vide
+ - Mettre en place les bonus

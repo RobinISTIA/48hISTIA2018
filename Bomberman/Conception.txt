@@ -1,0 +1,32 @@
+Bomberman
+
+Plateau à deux dimensions avec 3 types de case :
+ - vide
+ - mur incassable
+ - mur cassable
+ 
+Possibilité de trouver des bonus dans les murs cassables
+
+Deux personnages dont un joueur
+Les personnages peuvent se déplacer sur toute les cases vide
+Ils peuvent poser des bombes sur leur positions.
+Si un personnage est touché par une explosion une fois, c'est la mort.
+Ils peuvent se faire toucher par leur propre bombes
+Les bombes n'explosent que en hauteur et en largeur
+Les bombes explosent à deux cases de porté en porté 1
+Si une bombe en touche une autre, elle la fait exploser
+Si une explosion touche un joueur, il meure
+Une fois qu'une bombe est posée, elle est indéplassable
+Des objets trouvables dans les murs cassables permettent d'augmenter la portée de un
+Le personnage à une vitesse constante
+Pas de timer
+Les personnages commencent en position opposé
+Le jeu se termine lorsque l'un des deux joueurs meure
+Un seul round
+
+NIVEAU VR
+Deux écrans :
+ - un sur l'ordinateur ou on verra le jeu en vue de dessus
+ - Un avec le casque qui sera en FPS
+ 
+Toujours les mêmes positions de départ.
