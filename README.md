@@ -14,7 +14,7 @@ nom du projet PARTY'STIA
 
 * Si vous n'arrivez pas à push bicoze pas de repo distant lié il faut linker avec le repo github donc avec la commande "git remote add origin https://github.com/RobinISTIA/48hISTIA2018.git"
 * Sinon demander à google ou a quelqu'un qui s'y connait un peu en git.
-
+* Sinon en cas de soucis : [GitHubGraal](https://github.com/k88hudson/git-flight-rules)
 
 _Merci !_
 
