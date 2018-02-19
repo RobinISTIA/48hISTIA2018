@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33685513585670720}
   - component: {fileID: 23427980545527558}
   m_Layer: 0
-  m_Name: Group 13
+  m_Name: Lightsaber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
