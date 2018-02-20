@@ -1,14 +1,19 @@
-﻿using System.Collections;
+﻿using Assets._Project.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Plateau : MonoBehaviour {
 
+    /* Classe reliée au plateau de jeu bomberman
+       le gameObject plateau à pour unité de mesure 3 (m) (1 case = 3m)
+       gère*/
     
     public GameObject Tableau;
-    public Rigidbody BlocCassableOriginal;
-    public Rigidbody BlocIncassableOriginal;
+    public BlocCassable BlocCassableOriginal;
+    public BlocIncassable BlocIncassableOriginal;
     private int[,] tableau;
+    Dictionary<int[], Bloc> dictBloc;
 
     public Plateau() { }
 
@@ -16,9 +21,10 @@ public class Plateau : MonoBehaviour {
     {
         // initialisation du tableau de gestion du plateau (11*11)
         tableau = new int[row, col];
+        dictBloc = new Dictionary<int[], Bloc>();
 
         // initialisation des blocs incassables
-        for(int i=1; i<tableau.GetLength(0); i+=2)
+        for (int i=1; i<tableau.GetLength(0); i+=2)
         {
             for(int j=1; j<tableau.GetLength(1); j += 2)
             {
@@ -93,14 +99,22 @@ public class Plateau : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        Debug.Log("Start Plateau");
         this.Init(30/3, 30/3);
-        Debug.Log("Fin Init Plateau");
-        for (int x = 0; x < tableau.GetLength(0); x++)
+        Bloc clone;
+        for(int i=0; i<tableau.GetLength(0);i++)
         {
-            for (int z = 0; z < tableau.GetLength(1); z++)
+            for(int j=0; j < tableau.GetLength(1); j++)
             {
-                Instantiate(BlocCassableOriginal, new Vector3(x, 1.5f, z), Quaternion.identity);
+                if(tableau[i, j] == Bloc.BLOC_INCASSABLE)
+                {
+                    clone = Instantiate(BlocIncassableOriginal, new Vector3(i*3 + 1.5f, 1.5f, j*3 + 1.5f), Quaternion.identity);
+                    dictBloc.Add(new int[] { i, j }, clone);
+                }
+                else if(tableau[i, j] == Bloc.BLOC_CASSABLE)
+                {
+                    clone = Instantiate(BlocCassableOriginal, new Vector3(i*3 + 1.5f, 1.5f, j*3 + 1.5f), Quaternion.identity);
+                    dictBloc.Add(new int[] { i, j }, clone);
+                }
             }
         }
     }
