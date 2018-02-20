@@ -4,8 +4,7 @@ Planning des taches :
    - Constructeur -> Création du tableau (array[][]),
 		     placement de tous les blocs dans le tableau, 
 		     placement des joueurs dans le tableau
-   - Détection de la victoire -> reçoit un signal quand une bombe explose sur un joueur, 
-				 envoie un message au Manager
+   - Détection de la victoire -> quand une bombe explose sur un joueur envoie un message au Manager
    - Gérer l'explosion des bombes -> reçoit un signal des objets bombes,
 				     détruit les blocs destructibles à portée,
 				     tue les joueurs à portée
