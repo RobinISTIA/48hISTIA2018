@@ -12,9 +12,9 @@ public abstract class Bloc : MonoBehaviour {
     protected int type;
 
 
-	// Use this for initialization
+
 	void Start() {
-	    	
+	  
 	}
 	
 	// Update is called once per frame
