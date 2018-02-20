@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour {
 
+    public int Id { get; set; }
     public int PosX { get; set; }
     public int PosY { get; set; }
     public int Range { get; set; }
     public Plateau plateau;
 
-	// Use this for initialization
-	void Start () {
+    public Bomb()
+    {
+
+    }
+
+    public Bomb(int id, int posX, int posY, int range)
+    {
+        Id = id;
+        PosX = posX;
+        PosY = posY;
+        Range = range;
+        Invoke("Detonate", 5);
+    }
+
+    // Use this for initialization
+    void Start () {
         
 	}
 	
@@ -21,6 +36,6 @@ public class Bomb : MonoBehaviour {
 
     public void Detonate()
     {
-        plateau.Explosion();
+        plateau.Explosion(this);
     }
 }

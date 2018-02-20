@@ -9,6 +9,7 @@ public class Plateau : MonoBehaviour {
     public Rigidbody BlocCassableOriginal;
     public Rigidbody BlocIncassableOriginal;
     private int[,] tableau;
+    private List<Bomb> ListBomb;
 
     public Plateau() { }
 
@@ -16,6 +17,9 @@ public class Plateau : MonoBehaviour {
     {
         // initialisation du tableau de gestion du plateau (11*11)
         tableau = new int[row, col];
+
+        //initialisation de la liste de bombes
+        ListBomb = new List<Bomb>();
 
         // initialisation des blocs incassables
         for(int i=1; i<tableau.GetLength(0); i+=2)
@@ -80,9 +84,9 @@ public class Plateau : MonoBehaviour {
 
     }
 
-    public void Explosion()
+    public void Explosion(Bomb bomb)
     {
-
+        
     }
 
     public void PlayerMoved()
