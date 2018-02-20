@@ -13,11 +13,9 @@ public class Plateau : MonoBehaviour {
     public BlocCassable BlocCassableOriginal;
     public BlocIncassable BlocIncassableOriginal;
     private int[,] tableau;
-<<<<<<< HEAD
     private List<Bomb> ListBomb;
-=======
     Dictionary<int[], Bloc> dictBloc;
->>>>>>> 0a496f7ef1333a8bd1570e90d12e638c441c3080
+
 
     public Plateau() { }
 
