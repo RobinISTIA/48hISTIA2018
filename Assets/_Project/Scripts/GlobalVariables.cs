@@ -28,12 +28,12 @@ public class GlobalVariables : MonoBehaviour {
     }
 
     public bool? IsWon {
-        get {
-            SceneManager.LoadScene("Board");
+        get {            
             return IsWon;
         }
         set {
             IsWon = value;
+            if(value != null) SceneManager.LoadScene("Board");
         } }
 
     public uint NumberOfPlayers { get; set; }
